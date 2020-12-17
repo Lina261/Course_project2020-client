@@ -1,0 +1,8 @@
+FactoryName: авторай
+directorSurname: кравцов
+factoryAddress: немига 5
+proceeds: 475.0
+assets: 7785.0
+equity: 8785.0
+bacon: 646.0
+result: 0.07353443369379625

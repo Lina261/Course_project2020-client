@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.0" prefWidth="604.0" style="-fx-background-color: #F0F8FF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ShowFeaturesC">
+   <children>
+      <Label layoutX="193.0" layoutY="14.0" text="Показатели предприятия">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="featuresTable" layoutX="12.0" layoutY="76.0" prefHeight="59.0" prefWidth="572.0">
+        <columns>
+          <TableColumn fx:id="idFeatureC" prefWidth="45.5999755859375" text="id" />
+          <TableColumn fx:id="factoryNameC" prefWidth="104.00006866455078" text="Название" />
+            <TableColumn fx:id="proceedsC" prefWidth="93.60003662109375" text="Выручка" />
+            <TableColumn fx:id="assetsC" prefWidth="84.79998779296875" text="Активы" />
+            <TableColumn fx:id="equityC" prefWidth="132.79998779296875" text="Соб-ный капитал" />
+            <TableColumn fx:id="baconC" prefWidth="108.80001831054688" text="Чистая прибыль" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

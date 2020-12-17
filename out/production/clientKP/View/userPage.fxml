@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="922.0" style="-fx-background-color: #87CEFA;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserPageC">
+   <children>
+      <MenuBar fx:id="menuUser">
+        <menus>
+
+
+          <Menu mnemonicParsing="false" text="График">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#graphic" text="По предприятиям" />
+              <MenuItem mnemonicParsing="false" onAction="#by_country" text="По странам" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="553.0" prefWidth="833.0">
+         <children>
+            <Button fx:id="setFeatures" layoutX="654.0" layoutY="253.0" mnemonicParsing="false" onAction="#setFeatures" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Ввести показатели" />
+            <Button fx:id="addnewFactory" layoutX="654.0" layoutY="26.0" mnemonicParsing="false" onAction="#addNewFactory" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Добавить предприятие" />
+            <Button fx:id="editFactory" layoutX="654.0" layoutY="174.0" mnemonicParsing="false" onAction="#editFactory" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Редактировать предприятие" />
+            <Button fx:id="delFactory" layoutX="654.0" layoutY="97.0" mnemonicParsing="false" onAction="#delFactory" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Удалить предприятие" />
+            <Button fx:id="makeEfficiency" layoutX="654.0" layoutY="412.0" mnemonicParsing="false" onAction="#makeEfficiency" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Рассчитать рентабельность" />
+            <Button layoutX="429.0" layoutY="29.0" mnemonicParsing="false" onAction="#findFactory" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Найти" />
+            <TextField fx:id="findFactory" layoutX="207.0" layoutY="29.0" prefHeight="26.0" prefWidth="176.0" promptText="Введите название" />
+            <ChoiceBox fx:id="number_factory" layoutX="253.0" layoutY="84.0" prefWidth="150.0" />
+            <Button fx:id="showFeatures" layoutX="654.0" layoutY="334.0" mnemonicParsing="false" onAction="#showFeatures" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text=" Просмотреть показатели" />
+            <TabPane layoutX="22.0" layoutY="127.0" prefHeight="414.0" prefWidth="525.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Предприятия">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="529.0" style="-fx-background-color: #87CEFA;">
+                           <children>
+                              <TableView fx:id="factoryTable" layoutX="2.0" prefHeight="367.0" prefWidth="524.0">
+                                <columns>
+                                  <TableColumn fx:id="idFactoryCol" prefWidth="40.00000071525574" text="id" />
+                                  <TableColumn fx:id="factoryCol" prefWidth="123.20001983642578" text="Предприятие" />
+                                    <TableColumn fx:id="factoryAddressCol" prefWidth="108.79998779296875" text="Адрес " />
+                                    <TableColumn fx:id="directorSurnameCol" prefWidth="126.4000244140625" text="Директор" />
+                                    <TableColumn fx:id="countryCol" prefWidth="125.59994506835938" text="Страна" />
+                                    <TableColumn fx:id="user" prefWidth="87.20004882812498" text="Пользователь" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Button fx:id="otchet" layoutX="654.0" layoutY="490.0" mnemonicParsing="false" onAction="#otchet" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Отчет" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="484.0" style="-fx-background-color: #F0F8FF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SetFeaturesC">
+   <children>
+      <Label layoutX="141.0" layoutY="24.0" prefHeight="34.0" prefWidth="202.0" text="Введите показатели">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="proceeds" layoutX="242.0" layoutY="89.0" />
+      <TextField fx:id="assets" layoutX="242.0" layoutY="135.0" />
+      <TextField fx:id="equity" layoutX="242.0" layoutY="182.0" />
+      <TextField fx:id="bacon" layoutX="242.0" layoutY="227.0" />
+      <Button layoutX="189.0" layoutY="300.0" mnemonicParsing="false" onAction="#saveFeatures" text="СОХРАНИТЬ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="141.0" layoutY="88.0" text="Выручка">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="226.0" text="Чистая прибыль">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="134.0" prefHeight="27.0" prefWidth="78.0" text="Активы">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="181.0" text="Собственный капитал">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorM" layoutX="128.0" layoutY="262.0" text="Корректно заполните поля!!!" textFill="#e21010" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

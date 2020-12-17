@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminPageC">
+   <children>
+      <MenuBar prefHeight="27.0" prefWidth="692.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Вернуться">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#Exit" text="Вернуться" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Страны">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#showCountry" text="Страны-резиденции" />
+                </items>
+            </Menu>
+
+
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="418.0" prefWidth="671.0" style="-fx-background-color: #F0F8FF;">
+         <children>
+            <TabPane layoutY="-1.0" prefHeight="414.0" prefWidth="696.0" style="-fx-background-color: #87CEFA;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="allusers" text="Пользователи">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="642.0">
+                           <children>
+                              <Button fx:id="newUserB" layoutX="490.0" layoutY="82.0" mnemonicParsing="false" onAction="#newUser" prefHeight="35.0" prefWidth="177.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Добавить пользователя" />
+                              <Button fx:id="delUserB" layoutX="492.0" layoutY="146.0" mnemonicParsing="false" onAction="#delUser" prefHeight="34.0" prefWidth="175.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Удалить пользователя" />
+                              <Button fx:id="editUserB" layoutX="491.0" layoutY="205.0" mnemonicParsing="false" onAction="#editUser" prefHeight="34.0" prefWidth="176.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Редактировать пользователя" />
+                              <TableView fx:id="users" layoutX="14.0" layoutY="41.0" prefHeight="301.0" prefWidth="450.0">
+                                <columns>
+                                  <TableColumn fx:id="id" prefWidth="45.600006103515625" text="id" />
+                                  <TableColumn fx:id="name" prefWidth="91.20001220703125" text="Имя" />
+                                    <TableColumn fx:id="login" prefWidth="111.20001220703125" text="Логин" />
+                                    <TableColumn fx:id="password" prefWidth="111.199951171875" text="Пароль" />
+                                    <TableColumn fx:id="role" prefWidth="90.4000244140625" text="Роль админа" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab onSelectionChanged="#allFactory" text="Предприятия">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="714.0">
+                           <children>
+                              <TableView fx:id="factories" prefHeight="383.0" prefWidth="569.0">
+                                <columns>
+                                  <TableColumn fx:id="idFactory" prefWidth="52.79998779296875" text="id" />
+                                  <TableColumn fx:id="factoryName" prefWidth="94.40003204345703" text="Название" />
+                                    <TableColumn fx:id="factoryAddr" prefWidth="113.60003662109375" text="Адрес" />
+                                    <TableColumn fx:id="director" prefWidth="122.39996337890625" text="Директор" />
+                                    <TableColumn fx:id="country" prefWidth="124.0" text="Страна" />
+                                    <TableColumn fx:id="userFactory" prefWidth="60.00002441406252" text="Добавил" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="featuresB" layoutX="585.0" layoutY="148.0" mnemonicParsing="false" onAction="#allFeatures" prefHeight="39.0" prefWidth="96.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" text="Показатели" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

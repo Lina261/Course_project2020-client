@@ -1,0 +1,8 @@
+FactoryName: улыбка 
+directorSurname: горовой
+factoryAddress: московская 16
+proceeds: 80000.0
+assets: 668841.0
+equity: 4454680.0
+bacon: 76000.0
+result: 0.01706070918674293

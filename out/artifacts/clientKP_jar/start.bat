@@ -1,0 +1,1 @@
+java --module-path "C:\Users\User\Desktop\javafx-sdk-11.0.2\lib" --add-modules=javafx.swing,javafx.graphics,javafx.fxml,javafx.media,javafx.web -jar clientKP.jar

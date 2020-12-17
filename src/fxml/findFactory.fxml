@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0F8FF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SearchFactoryC">
+   <children>
+      <Label layoutX="178.0" layoutY="23.0" text="Найдены предприятия:">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="factoryTable" layoutX="30.0" layoutY="100.0" prefHeight="238.0" prefWidth="551.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="42.4000244140625" text="id" />
+          <TableColumn fx:id="factoryC" prefWidth="108.0" text="Название" />
+            <TableColumn fx:id="addressC" prefWidth="96.00006103515625" text="Пользователь" />
+            <TableColumn fx:id="directorC" prefWidth="119.199951171875" text="Адрес" />
+            <TableColumn fx:id="countryC" prefWidth="95.199951171875" text="Страна" />
+            <TableColumn fx:id="userC" prefWidth="92.7999267578125" text="Директор" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
